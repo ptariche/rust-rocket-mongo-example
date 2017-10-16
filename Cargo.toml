@@ -1,0 +1,33 @@
+[package]
+name = "rocket-mongo-example"
+version = "0.1.0"
+authors = ["Peter A. Tariche <ptariche@gmail.com>"]
+
+[dependencies]
+rocket = {git = "https://github.com/SergioBenitez/Rocket.git"}
+rocket_codegen = {git = "https://github.com/SergioBenitez/Rocket.git"}
+rocket_contrib = { features = ["uuid"], git = "https://github.com/SergioBenitez/Rocket.git" }
+uuid = { version = "0.5", features = ["v4"] }
+rust-crypto = "^0.2"
+serde = "1.0.8"
+serde_derive = "1.0.8"
+serde_json = "1.0.2"
+bson = "0.10.0"
+mongodb = "0.3.7"
+
+time = "*"
+regex = "*"
+rand = "*"
+
+
+jsonwebtoken = "1"
+rustc-serialize = "0.3"
+
+[dev-dependencies]
+rocket = { git = "https://github.com/SergioBenitez/Rocket.git" }
+
+[development]
+address = "localhost"
+
+[production]
+address = "0.0.0.0"
