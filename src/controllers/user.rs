@@ -14,8 +14,8 @@ pub fn create(user: Json<meta::user::Post>) -> JsonValue {
     last_name: user.last_name.to_owned()
   };
 
-  let document = model.create().unwrap().unwrap();
-  let result = bson::from_bson::<meta::user::PostResponse>(bson::Bson::Document(document));
+  let document = model.create().unwrap();
+  let result = bson::from_bson::<meta::user::PostResponse>(bson::Bson::Document(document.unwrap()));
 
   match result {
     Ok(user) => {
