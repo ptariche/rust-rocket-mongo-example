@@ -42,3 +42,4 @@ fn main() {
             .catch(catchers![controllers::not_found::lookup])
             .launch();
 }
+
